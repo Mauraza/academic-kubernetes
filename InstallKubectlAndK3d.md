@@ -1,11 +1,13 @@
-# Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
+# Install tools
+
+## Install [kubectl](https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/)
 
 ```bash
 curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
 sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
 ```
 
-# Install [k3d](https://k3d.io/v5.7.4/#installation)
+## Install [k3d](https://k3d.io/v5.7.4/#installation)
 
 ```bash
 curl -s "https://raw.githubusercontent.com/k3d-io/k3d/main/install.sh"| bash

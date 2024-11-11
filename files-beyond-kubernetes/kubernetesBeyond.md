@@ -1,16 +1,28 @@
 # Beyond Kubernetes fundamentals
 
-Before start check yout path.
+Before start check your path.
 
 ```bash
 cd files-beyond-kubernetes/
 ```
+<!-- TOC -->
+
+- [Beyond Kubernetes fundamentals](#beyond-kubernetes-fundamentals)
+  - [Ingress](#ingress)
+    - [Exposing a web server using Ingress](#exposing-a-web-server-using-ingress)
+  - [Persistence Volume Claim](#persistence-volume-claim)
+  - [Job and CronJob](#job-and-cronjob)
+  - [InitContainers](#initcontainers)
+  - [ConfigMap](#configmap)
+  - [Secret](#secret)
+
+<!-- /TOC -->
 
 ## Ingress
 
 [minimal-ingress.yaml](./minimal-ingress.yaml)
 
-### Esposing a web server using Ingress
+### Exposing a web server using Ingress
 
 ```bash
 # Create a new deployment
@@ -26,7 +38,7 @@ kubectl expose deployment/my-webserver --name my-webserver --port=8080 --target-
 kubectl port-forward service/my-webserver 7777:8080
 ```
 
-Go to: http://127.0.0.1:7777/
+Go to: <http://127.0.0.1:7777/>
 
 [my-demo-ingress.yaml](./my-demo-ingress.yaml)
 
@@ -35,7 +47,7 @@ kubectl apply -f my-demo-ingress.yaml
 kubectl get ingress
 ```
 
-Go to: http://localhost:8080
+Go to: <http://localhost:8080>
 
 ## Persistence Volume Claim
 

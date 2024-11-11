@@ -1,4 +1,4 @@
-# Helm Chart
+# Helm Charts
 
 ## [Install helm](https://helm.sh/docs/intro/install/)
 
@@ -20,10 +20,10 @@ helm search repo bitnami
 # Install an helm chart
 helm install my-release bitnami/apache
 
-# Install an application 
+# Install an application
 helm install my-release oci://registry-1.docker.io/bitnamicharts/apache
 
-# List the installed releases in the cluster 
-helm list 
+# List the installed releases in the cluster
+helm list
 
 ```

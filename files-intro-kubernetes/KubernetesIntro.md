@@ -1,6 +1,6 @@
 # Introduction to kubernetes
 
-Before start check yout path.
+Before start check your path.
 
 ```bash
 cd files-intro-kubernetes/
@@ -23,7 +23,7 @@ kubectl get pod mongo
 # Create a new label on-the-fly
 kubectl label pods mongo my-label=my-value
 # Show labels in the output
-kubectl get pods --show-labels 
+kubectl get pods --show-labels
 # Find pods having label "my-label" equals to "my-value"
 kubectl get pods -l my-label=foo
 # List pods with a new column showing the label value "my-label"
@@ -100,7 +100,7 @@ kubectl expose deployment/nginx-exposed --name nginx-clusterip --port=8080 --tar
 kubectl port-forward service/nginx-clusterip 7777:8080
 ```
 
-Go to: http://localhost:7777/
+Go to: <http://localhost:7777/>
 
 [nginx-svc.yaml](./nginx-svc.yaml)
 
@@ -113,7 +113,7 @@ Accessing a ClusterIP service from inside:
 
 ```bash
 # Get the service "nginx-clusterip", note that it listens on :8080
-kubectl get service nginx-clusterip 
+kubectl get service nginx-clusterip
 
 # Run wget inside a Pod that will get deleted after running the command
 kubectl run -it --rm --restart=Never busybox --image=busybox wget http://nginx-clusterip:8080

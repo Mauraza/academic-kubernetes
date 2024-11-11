@@ -1,4 +1,4 @@
-# Suse academic-kubernetes
+# SUSE academic-kubernetes
 
 ## Index
 
@@ -8,4 +8,4 @@
 
 - ### [Beyond kubernetes fundamentals](./files-beyond-kubernetes/kubernetesBeyond.md)
 
-- ### [Helm charts](./helm-chats.md)
+- ### [Helm charts](./helm-charts.md)

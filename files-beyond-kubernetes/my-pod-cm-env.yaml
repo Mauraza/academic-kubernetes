@@ -7,6 +7,8 @@ spec:
     - name: mysql
       image: bitnami/mysql
       env:
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "yes"
         - name: MYSQL_REPLICATION_MODE
           valueFrom:
             configMapKeyRef:

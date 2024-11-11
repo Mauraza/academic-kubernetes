@@ -80,7 +80,7 @@ kubectl get pods
 
 ## ConfigMap
 
-[my-cm.yaml](./my-cm-yaml)
+[my-cm.yaml](./my-cm.yaml)
 
 ```bash
 kubectl apply -f my-cm.yaml
@@ -95,8 +95,7 @@ kubectl create configmap mysql --from-literal=replication-mode=master --from-lit
 check:
 
 ```bash
-kubectl get configmap -o jsonpath='{.data}'
-{"replication-mode":"master","replication-user":"master"}
+kubectl get configmap mysql -o jsonpath='{.data}'
 ```
 
 [my-pod-cm-env.yaml](./my-pod-cm-env.yaml)
@@ -128,10 +127,10 @@ kubectl create secret generic mysql --from-literal=password=root
 Check:
 
 ```bash
-kubectl get secret mysql -o go-template='{{.data.password | base64decode}}' root
+kubectl get secret mysql -o go-template='{{.data.password | base64decode}}'
 ```
 
-[my-pod-secret.yaml](./my-pod-secret.yml)
+[my-pod-secret.yaml](./my-pod-secret.yaml)
 
 ```bash
 kubectl apply -f my-pod-secret.yaml

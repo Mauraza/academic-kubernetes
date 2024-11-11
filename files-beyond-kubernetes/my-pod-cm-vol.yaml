@@ -6,6 +6,9 @@ spec:
   containers:
     - name: mysql
       image: bitnami/mysql
+      env:
+        - name: ALLOW_EMPTY_PASSWORD
+          value: "yes"
       volumeMounts:
         - name: my-config
           mountPath: "/etc/foo"

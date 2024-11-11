@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mysql
+immutable: false
+data:
+  replication-mode: master
+  replication-user: master

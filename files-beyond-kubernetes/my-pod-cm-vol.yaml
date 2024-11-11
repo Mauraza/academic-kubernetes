@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: mysql-vol
+spec:
+  containers:
+    - name: mysql
+      image: bitnami/mysql
+      volumeMounts:
+        - name: my-config
+          mountPath: "/etc/foo"
+          readOnly: true
+  volumes:
+    - name: my-config
+      configMap:
+        name: mysql

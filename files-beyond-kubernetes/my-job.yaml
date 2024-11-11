@@ -1,0 +1,14 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: ping
+spec:
+  template:
+    metadata:
+      name: ping
+    spec:
+      restartPolicy: OnFailure
+      containers:
+        - name: ping
+          image: busybox
+          command: ["ping", "www.suse.com"]
